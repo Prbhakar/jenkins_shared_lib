@@ -6,6 +6,9 @@ class PipelineUtils {
         println "Cleaning up workspace at: ${workspacePath}"
         println "Cleaning up workspace at src directory: ${workspacePath}"
         // Perform cleanup logic
+         sh """
+            rm -rf ${workspacePath}/*
+            """
     }
 
     static void buildProject(String projectPath) {

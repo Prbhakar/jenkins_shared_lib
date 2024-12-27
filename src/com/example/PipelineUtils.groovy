@@ -4,6 +4,7 @@ package com.example
 class PipelineUtils {
     static void deleteWorkspace(String workspacePath) {
         println "Cleaning up workspace at: ${workspacePath}"
+        println "Cleaning up workspace at src directory: ${workspacePath}"
         // Perform cleanup logic
     }
 

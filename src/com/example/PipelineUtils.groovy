@@ -2,14 +2,14 @@ package com.example
 
 //group similar methods together
 class PipelineUtils {
-    static void deleteWorkspace(String workspacePath) {
+    static void deleteWorkspace(script, String workspacePath) {
         println "Cleaning up workspace at: ${workspacePath}"
         println "Cleaning up workspace at src directory: ${workspacePath}"
         println "Cleaning up workspace at src directory: 02-01-2025"
         // Perform cleanup logic
-         sh """
-            rm -rf ${workspacePath}/*
-            """
+        
+            script.sh "rm -rf ${workspacePath}/*"
+           
     }
 
     static void buildProject(String projectPath) {
